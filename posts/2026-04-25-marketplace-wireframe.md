@@ -1,10 +1,10 @@
 ---
-title: Post Title
+title: Post TitleW
 date: 2026-02-14
 author: Mengyun Wei
 summary: First blog post about wireframes
 tags:
-  - tag1
+  - wireframe
   - tag2
   - tag3
 ---
