@@ -1,5 +1,5 @@
 ---
-title: Post TitleW
+title: Concept draft-Wireframe
 date: 2026-02-14
 author: Mengyun Wei
 summary: First blog post about wireframes
