@@ -1,60 +1,59 @@
 ---
-title: Concept draft-Wireframe
-date: 2026-02-14
-author: Mengyun Wei
-summary: First blog post about wireframes
-tags:
-  - UX
-  - Wireframe
-  - Marketplace
+title: Week 4 – Initial Interpretation of Project Brief and Functional Requirements
+date: 2026-04-25
+summary: Early-stage analysis of the project brief and identification of core functional requirements for a student-focused web application.
+tags: [functional requirements, ideation, community, international students]
 ---
-## Context
 
-This week, our team started designing wireframes for a second-hand marketplace targeting international students in Sydney.
+## Interpreting the Project Context
 
-The goal was to define the structure of key pages, including the homepage and listings page.
+As a group of international students living in Sydney, we began this project by reflecting on our own lived experience within student accommodation. A recurring situation we identified is the frequent need to relocate due to short-term housing arrangements. Each relocation typically involves purchasing, selling, or discarding household items such as furniture and kitchen equipment.
 
-## Design Decisions
+This context helped us understand a potential opportunity space for designing a web application that supports students during these transitions.
 
-We divided the homepage into three main sections:
+---
 
-- Category navigation for quick access
-- Featured items to attract attention
-- Recent listings for up-to-date content
+## Initial Problem Understanding
 
-For the listings page, we introduced a sidebar filter system to support more advanced browsing.
+From early discussion, we observed that the main difficulty is not simply accessing second-hand goods, but managing the entire process of relocation-related item exchange under time constraints.
 
-## Components
+Existing platforms are used by students for buying and selling items, however they often require users to manually search through unstructured posts and do not provide features designed specifically around moving timelines or relocation urgency.
 
-One key reusable component is the item card, which appears across multiple pages.
+This suggests that the problem space includes both logistical challenges (time, coordination, availability) and interaction inefficiencies (searching, communication, trust).
 
-Each card includes:
-- Image
-- Title
-- Price
-- Tags (type, condition, location)
+---
 
-This helps maintain consistency and simplifies development.
+## Identifying Functional Requirements
 
-## Data Considerations
+Based on this initial understanding, we identified several core functional requirements that a system in this context should support.
 
-The listings page relies heavily on dynamic data.
+### Core User Needs
+Users should be able to:
+- List items quickly when preparing to move
+- Browse available items in a structured and searchable way
+- Filter items based on category and availability timing
+- Communicate with other users to coordinate exchange
+- Track the status of items (e.g. available, reserved, completed)
 
-Each item requires:
-- Title
-- Price
-- Category
-- Location
-- Timestamp
+### System Requirements
+The system should be able to:
+- Store structured item data including category, condition, and availability date
+- Support fast search and filtering functions
+- Maintain user accounts for interaction and communication
+- Handle item status updates during the exchange process
 
-Filters will modify how this data is queried and displayed.
+These requirements highlight the need for a system that prioritises speed, clarity, and structured interaction rather than complex marketplace functionality.
 
-## Reflection
+---
 
-One challenge we encountered was balancing simplicity and functionality.
+## Scope and Constraints
 
-While the homepage should remain clean, it also needs to provide enough entry points for users.
+Given the time and technical constraints of the project, it is important to prioritise essential functionality. Features such as advanced payment systems, algorithmic recommendations, or large-scale marketplace mechanisms are considered out of scope at this stage.
 
-In future iterations, we plan to explore:
-- Personalised recommendations
-- Location-based filtering
+Instead, the focus is on defining a minimal but functional system that can support core relocation-related interactions between users.
+
+---
+
+## Next Steps
+
+To further develop these requirements, we will explore how users interact with the system through a wireflow diagram. This will help us visualise key actions such as posting items, searching, and coordinating exchanges, and will inform future interface and interaction design decisions.
