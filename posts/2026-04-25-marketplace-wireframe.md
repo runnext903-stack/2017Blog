@@ -1,5 +1,5 @@
 ---
-title: Week 4 – Initial Interpretation of Project Brief and Functional Requirements
+title: Week 7 – Initial Interpretation of Project Brief and Functional Requirements
 date: 2026-04-25
 summary: Early-stage analysis of the project brief and identification of core functional requirements for a student-focused web application.
 tags: [functional requirements, ideation, community, international students]
