@@ -125,7 +125,7 @@ The project also became more technically complex than originally expected. Featu
 
 ### Homepage Wireframe
 
-![Homepage Wireframe](./assets/homepage-wireframe.jpg)
+![Homepage Wireframe](../assets/homepage-wireframe.jpg)
 
 This wireframe helped define how marketplace content would be prioritised and discovered by users.
 
@@ -133,7 +133,7 @@ This wireframe helped define how marketplace content would be prioritised and di
 
 ### Category Filtering Page
 
-![Category Filter Wireframe](./assets/category-wireframe.jpg)
+![Category Filter Wireframe](../assets/category-wireframe.jpg)
 
 This interface revealed the need for structured categorisation and searchable metadata.
 
@@ -141,7 +141,7 @@ This interface revealed the need for structured categorisation and searchable me
 
 ### Item Detail Page
 
-![Item Detail Wireframe](./assets/item-detail-wireframe.jpg)
+![Item Detail Wireframe](../assets/item-detail-wireframe.jpg)
 
 The product detail page exposed relationships between listings, seller identity, and item availability.
 
@@ -149,7 +149,7 @@ The product detail page exposed relationships between listings, seller identity,
 
 ### Product Upload Page
 
-![Upload Wireframe](./assets/upload-wireframe.jpg)
+![Upload Wireframe](../assets/upload-wireframe.jpg)
 
 This wireframe clarified the structured information required for user-generated listings.
 
@@ -157,7 +157,7 @@ This wireframe clarified the structured information required for user-generated 
 
 ### Profile Page
 
-![Profile Wireframe](./assets/profile-wireframe.jpg)
+![Profile Wireframe](../assets/profile-wireframe.jpg)
 
 The profile interface highlighted the importance of identity and trust within the marketplace ecosystem.
 
@@ -165,7 +165,7 @@ The profile interface highlighted the importance of identity and trust within th
 
 ### Choose message Page
 
-![Login Wireframe](./assets/message-choose-wireframe.jpg)
+![Login Wireframe](../assets/message-choose-wireframe.jpg)
 
 The login flow demonstrated how user authentication connects interactions across the platform.
 
@@ -173,6 +173,6 @@ The login flow demonstrated how user authentication connects interactions across
 
 ### Messaging Page
 
-![Messaging Wireframe](./assets/message-wireframe.jpg)
+![Messaging Wireframe](../assets/message-wireframe.jpg)
 
 The messaging interface exposed the complexity of supporting user-to-user communication around specific products.
