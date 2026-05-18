@@ -1,127 +1,45 @@
----
-title: Week 8 – From Wireframes to System Structure
+﻿---
+title: Week 8 - From Interfaces to Structured Information Systems
 date: 2026-05-01
-summary: Developing wireframes revealed the underlying system structure and relational data required to support marketplace interactions within the platform.
-tags: [wireframes, DDD, DBML, marketplace, information architecture]
+summary: Developing wireframes revealed that the platform depended on structured coordination systems rather than isolated marketplace pages.
+tags: [wireframes, DBML, interaction design, data modelling, information architecture]
 ---
 
 ## Context
 
-At this stage of the project, the team began translating early user needs into more concrete interface structures. Based on the needs of Sydney student users within second-hand marketplace scenarios, the application was divided into several key sections, including the homepage, category filtering page, item detail page, product upload page, profile page, login page, and direct messaging interface.
+This week extends the earlier functional requirements into a more formal system design context. The wireframes were evaluated against the fixed implementation stack: MojoJS routing and server-side templates, SQLite persistence, HTMX interaction, Git-based development, and the unchanged BlaBla Corp prototype template. This helped keep the design realistic rather than proposing interactions that would require a different framework or a fully client-side application.
 
-Creating these wireframes helped clarify how users would navigate the platform and interact with marketplace content. However, the process also revealed that many seemingly simple interactions depended on underlying system logic and structured relational data.
+Building on Week 7's functional requirements, we developed wireframes and shifted focus from individual pages to interconnected systems, as even simple interactions required coordination between users, listings, and identity systems. Core requirements were prioritised around browsing, listing, and messaging, while advanced features such as recommendation systems were excluded due to MVP constraints.
 
----
+## Wireframes and Design Decisions
 
-## From Interface Ideas to System Thinking
+The wireframes also introduced early accessibility and responsive design expectations. Independent pages are easier to test with keyboard navigation and screen readers than layered popups, especially when the interface is rendered through server-side templates. Mobile and desktop behaviour were considered through navigation density, card readability, form spacing, and tap target size.
 
-Developing wireframes shifted the project from interface-focused thinking toward understanding the application as a connected system. Each screen introduced new interaction requirements that required backend support and data relationships.
+Guided by last week's requirements, we created wireframes for core pages, leading to two key decisions. First, **simplifying page elements vs. retaining core functionality**: we removed complex features (e.g., algorithm recommendations) to prioritize intuitive browsing/communication for international students, avoiding prototype delays. Second, **independent messaging pages vs. embedded popups**: we chose independent pages to help users manage multiple conversations easily, aligning with their needs. 
 
-For example, the product detail page revealed the need to connect listing information with seller identity, item availability, and category data. The messaging page introduced user-to-user relationships and highlighted the complexity of supporting communication around specific products.
+## DDD, DBML, and Data Modeling
 
-Similarly, the category filtering interface exposed the need for structured metadata and searchable categorisation systems. These interactions demonstrated that the interface could not function independently from the underlying information architecture.
+The data model created clear testing expectations. Listing creation should persist to SQLite, messages should be associated with the correct users and listings, and routes should obtain `user_id` and `username` from the session rather than from client-submitted values. It also highlighted a privacy requirement: users should only see conversations that involve their own account.
 
----
+To translate wireframes to code, we used **DDD** to map core domains (User, Listing, Message), then **DBML** for data modeling. A third decision: **redundant fields vs. association efficiency** - we used foreign keys instead of redundant fields to ensure data consistency. We also identified the `Message` table as a junction entity between `User` and `Listing`. Additionally, we opted for asynchronous messaging to meet MVP timelines.
 
-## Identifying Data Requirements
+## Evaluation
 
-The wireframes exposed several hidden data requirements that were necessary to support marketplace interactions.
+We reserved detailed compliance/accessibility optimization for post-prototype. Wireframes include privacy/accessibility placeholders (hiding sensitive data, WCAG alignment) to ensure usability.
 
-| Interface Element | Required Data |
-|---|---|
-| Homepage | featured listings, categories, timestamps |
-| Category filter page | tags, categories, keywords |
-| Item detail page | item description, seller ID, availability |
-| Product upload page | images, price, condition, category |
-| Profile page | user information, listing history |
-| Messaging page | sender ID, receiver ID, timestamps |
+At this stage, evaluation criteria were defined rather than fully executed. The system should support WCAG 2.1 AA expectations, including clear labels, meaningful headings, visible focus states, and sufficient colour contrast. Performance was also considered through the requirement that pages should ideally load within one second and must remain below three seconds during prototype testing.
 
-Through this process, the project evolved from interface-focused thinking toward understanding how user interactions depend on structured information architecture and system relationships.
-
----
-
-## Using DDD and DBML
-
-As the project became more structurally complex, the team began exploring Domain-Driven Design (DDD) and DBML to better understand the system architecture behind the interface.
-
-This became particularly important because the project was developed collaboratively. Without a shared understanding of entities, relationships, and database structure, later development stages would become difficult to coordinate consistently across team members.
-
-The DDD process helped identify the platform’s core entities, including:
-
-- User
-- Product
-- Category
-- Message
-
-These entities represented the primary interactions within the marketplace ecosystem.
-
-DBML was then used to visualise how these entities related to one another within the database structure.
-
-```dbml
-Table user {
-  id integer [pk, increment]
-  name text
-  email text
-  university text
-  avatar text
-}
-
-Table category {
-  id integer [pk, increment]
-  name text
-}
-
-Table product {
-  id integer [pk, increment]
-  title text
-  price integer
-  description text
-  seller_id integer [ref: > user.id]
-  category_id integer [ref: > category.id]
-  status text
-}
-
-Table message {
-  id integer [pk, increment]
-  sender_id integer [ref: > user.id]
-  receiver_id integer [ref: > user.id]
-  product_id integer [ref: > product.id]
-  content text
-}
-```
-
-The database structure also revealed how information dependencies shape the user experience.
-
-| Entity Relationship | Design Implication |
-|---|---|
-| Product → User | Each listing requires ownership and seller identity |
-| Product → Category | Filtering and browsing rely on structured categorisation |
-| Message → Product | Conversations are contextualised around specific listings |
-| Message → User | Communication requires sender and receiver tracking |
-
-This process demonstrated that interaction design decisions directly influenced backend structure and database complexity.
-
----
-
-## Trade-offs and Scope Decisions
-
-During system modelling, the messaging feature emerged as one of the more technically complex components of the platform. While direct communication supports trust and negotiation within second-hand marketplaces, implementing a scalable real-time messaging system would require significantly more backend infrastructure.
-
-As a result, the project prioritised establishing the core marketplace structure first, including browsing, listing uploads, and item detail interactions, before expanding into more advanced communication features.
-
-This decision helped maintain a more achievable MVP scope while still supporting the platform’s primary user goals.
-
----
+Cookie and privacy compliance were treated as system constraints. Because all users are assumed to be logged in, the session cookie is necessary for authentication. No analytics, advertising, or non-essential tracking should be introduced unless a consent mechanism is added.
 
 ## Reflection
 
-This stage significantly changed the team’s understanding of the project. Initially, the platform was approached primarily through interface design and user interaction flows. However, the wireframing and database modelling process revealed that many design decisions were deeply connected to system structure and relational data dependencies.
-
-The project also became more technically complex than originally expected. Features that appeared simple from a user perspective often required multiple layers of backend coordination and entity relationships. As a result, technical feasibility began influencing interface decisions more directly throughout the design process.
+This stage shifted me to **system-oriented design**. Wireframing revealed trade-offs, and DDD/DBML transformed the project into a coordination-focused system. Every decision balanced user needs, feasibility, maintainability, and testability, strengthening the prototype. The next implementation stage therefore needed to preserve this structure in MojoJS routes, SQLite tables, HTMX partials, and Git-tracked feature changes.
 
 ---
 
-## Diagrams
+## Diagrams and System Artifacts
+
+---
 
 ### Homepage Wireframe
 
@@ -131,19 +49,19 @@ This wireframe helped define how marketplace content would be prioritised and di
 
 ---
 
-### Category Filtering Page
+### Community Page
 
-![Category Filter Wireframe](../assets/category-wireframe.jpg)
+![Community Wireframe](../assets/community-wireframe.jpg)
 
-This interface revealed the need for structured categorisation and searchable metadata.
+The page exposed relationships between relocation needs, bundled offers, and community-based listings such as moving-out posts and bulk deals.
 
 ---
 
-### Item Detail Page
+### Browse Essentials Page
 
-![Item Detail Wireframe](../assets/item-detail-wireframe.jpg)
+![Browse Essentials Wireframe](../assets/BrowseEssentials-wireframe.jpg)
 
-The product detail page exposed relationships between listings, seller identity, and item availability.
+The page supports users in applying precise filters to locate items that match their purchase needs.
 
 ---
 
@@ -159,20 +77,20 @@ This wireframe clarified the structured information required for user-generated 
 
 ![Profile Wireframe](../assets/profile-wireframe.jpg)
 
-The profile interface highlighted the importance of identity and trust within the marketplace ecosystem.
-
----
-
-### Choose message Page
-
-![Login Wireframe](../assets/message-choose-wireframe.jpg)
-
-The login flow demonstrated how user authentication connects interactions across the platform.
+The profile page highlights trust and identity through university verification badges.
 
 ---
 
 ### Messaging Page
 
-![Messaging Wireframe](../assets/message-wireframe.jpg)
+![Messaging Wireframe](../assets/message-choose-wireframe.jpg)
 
 The messaging interface exposed the complexity of supporting user-to-user communication around specific products.
+
+---
+
+### DBML
+
+![DBML visual diagram](../assets/dbml-diagram.jpg)
+
+
