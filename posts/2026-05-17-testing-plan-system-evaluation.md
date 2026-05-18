@@ -49,3 +49,8 @@ Acceptable thresholds are: TTFB under 300ms locally where possible, FCP under on
 
 Several improvements are clear. The main issue is inconsistency between SQLite persistence and fixture data, which can make the interface appear complete while real data flow remains fragile. The architecture needs cleaner boundaries between full-page templates and HTMX partials. Search/filtering need stronger empty-result, combined-filter, invalid-input, and database-backed handling. Product/listing flows remain incomplete around editing, validation, uploads, and confirmation states.
 
+---
+
+## Diagrams
+
+![Testing Strategy Matrix](/2017Blog/assets/testing-strategy-matrix.jpg)

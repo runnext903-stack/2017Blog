@@ -45,4 +45,7 @@ This stage improved the interface but did not fully validate the system. Categor
 
 ---
 
+## Diagrams
 
+![Component Architecture Diagram](/2017Blog/assets/component-architecture-diagram.jpg)
+The diagram shows a layered system architecture including frontend UI components, an HTMX interaction layer, a MojoJS MVC backend, and a SQLite database. It demonstrates separation of concerns, modular design, and efficient interaction through partial page updates.

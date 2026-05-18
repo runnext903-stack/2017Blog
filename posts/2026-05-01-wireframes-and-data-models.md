@@ -37,9 +37,7 @@ This stage shifted me to **system-oriented design**. Wireframing revealed trade-
 
 ---
 
-## Diagrams and System Artifacts
-
----
+## Diagrams
 
 ### Homepage Wireframe
 

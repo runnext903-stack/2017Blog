@@ -67,6 +67,9 @@ The next stage of development will involve wireflows and interaction diagrams to
 
 ---
 
-## User flow diagram
+## Diagrams
 
 ![User flow](/2017Blog/assets/user-flow.jpg)
+This user flow highlights the separation between item-based transactions and community-based coordination, reflecting the shift from a traditional marketplace model to a relocation-oriented interaction system.
+
+![Site map](/2017Blog/assets/site-map.jpg)
