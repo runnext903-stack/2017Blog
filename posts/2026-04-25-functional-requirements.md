@@ -64,3 +64,9 @@ These requirements also informed early technical considerations. Since users are
 Given the constraints of the project timeline, advanced features such as payment integration is considered out of scope for the initial prototype. This allows the focus to remain on usability, coordination efficiency, and feasibility within the required tech stack.
 
 The next stage of development will involve wireflows and interaction diagrams to further evaluate how users navigate between individual item exchange and community-level coordination within time-sensitive relocation contexts.
+
+---
+
+## User flow diagram
+
+![User flow](/2017Blog/assets/user-flow.jpg)
