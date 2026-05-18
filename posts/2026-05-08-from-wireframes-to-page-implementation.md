@@ -1,5 +1,5 @@
 ﻿---
-title: Week 10 - Page-Level Implementation and UI Consistency Refinement
+title: Week 9 - Page-Level Implementation and UI Consistency Refinement
 date: 2026-05-08
 summary: This week focused on page-level implementation (homepage and category filtering page), refining UI consistency, optimizing user onboarding experience, building reusable UI components, and reflecting on development workflow challenges.
 tags: [UI refinement, page implementation, reusable components, workflow reflection, interface consistency]

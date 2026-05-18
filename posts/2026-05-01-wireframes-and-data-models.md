@@ -43,7 +43,7 @@ This stage shifted me to **system-oriented design**. Wireframing revealed trade-
 
 ### Homepage Wireframe
 
-![Homepage Wireframe](../assets/homepage-wireframe.jpg)
+![Homepage Wireframe](/2017Blog/assets/homepage-wireframe.jpg)
 
 This wireframe helped define how marketplace content would be prioritised and discovered by users.
 
@@ -51,7 +51,7 @@ This wireframe helped define how marketplace content would be prioritised and di
 
 ### Community Page
 
-![Community Wireframe](../assets/community-wireframe.jpg)
+![Community Wireframe](/2017Blog/assets/community-wireframe.jpg)
 
 The page exposed relationships between relocation needs, bundled offers, and community-based listings such as moving-out posts and bulk deals.
 
@@ -59,7 +59,7 @@ The page exposed relationships between relocation needs, bundled offers, and com
 
 ### Browse Essentials Page
 
-![Browse Essentials Wireframe](../assets/BrowseEssentials-wireframe.jpg)
+![Browse Essentials Wireframe](/2017Blog/assets/BrowseEssentials-wireframe.jpg)
 
 The page supports users in applying precise filters to locate items that match their purchase needs.
 
@@ -67,7 +67,7 @@ The page supports users in applying precise filters to locate items that match t
 
 ### Product Upload Page
 
-![Upload Wireframe](../assets/upload-wireframe.jpg)
+![Upload Wireframe](/2017Blog/assets/upload-wireframe.jpg)
 
 This wireframe clarified the structured information required for user-generated listings.
 
@@ -75,7 +75,7 @@ This wireframe clarified the structured information required for user-generated 
 
 ### Profile Page
 
-![Profile Wireframe](../assets/profile-wireframe.jpg)
+![Profile Wireframe](/2017Blog/assets/profile-wireframe.jpg)
 
 The profile page highlights trust and identity through university verification badges.
 
@@ -83,7 +83,7 @@ The profile page highlights trust and identity through university verification b
 
 ### Messaging Page
 
-![Messaging Wireframe](../assets/message-choose-wireframe.jpg)
+![Messaging Wireframe](/2017Blog/assets/message-choose-wireframe.jpg)
 
 The messaging interface exposed the complexity of supporting user-to-user communication around specific products.
 
@@ -91,6 +91,6 @@ The messaging interface exposed the complexity of supporting user-to-user commun
 
 ### ERDs
 
-![Entity-Relationship Diagrams](../assets/Entity-Relationship-diagram.jpg)
+![Entity-Relationship Diagrams](/2017Blog/assets/Entity-Relationship-diagram.jpg)
 
 
