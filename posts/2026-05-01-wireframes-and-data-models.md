@@ -89,8 +89,8 @@ The messaging interface exposed the complexity of supporting user-to-user commun
 
 ---
 
-### DBML
+### ERDs
 
-![DBML visual diagram](../assets/dbml-diagram.jpg)
+![Entity-Relationship Diagrams](../assets/Entity-Relationship-diagram.jpg)
 
 
