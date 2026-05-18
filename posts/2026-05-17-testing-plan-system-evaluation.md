@@ -1,5 +1,5 @@
 ---
-title: Week 9/10 - Testing Plan, System Evaluation, and Improvement Priorities
+title: Week 11 - Testing Plan, System Evaluation, and Improvement Priorities
 date: 2026-05-17
 summary: This entry defines a testing and evaluation plan for the MojoJS, SQLite, and HTMX prototype, while identifying technical and UX improvements required before the system can be considered robust.
 tags: [testing, system evaluation, accessibility, performance, security, interaction design]
