@@ -15,18 +15,18 @@ One of the strongest aspects of the final prototype was its use of server-side r
 Desktop Lighthouse testing demonstrated strong overall performance across most pages. Performance scores ranged from 94 to 100, while Accessibility and Best Practices consistently scored between 96 and 100. These results suggest that the application's architecture successfully supported efficient page rendering and interaction under standard desktop conditions.
 
 **[Evidence 1: Lighthouse Desktop Results Table]**
-![Desktop lighthouse test results](/2017Blog/assets/Desktop-lighthouse-performance-test-results.png)
+![Desktop lighthouse test results](assets/Desktop-lighthouse-performance-test-results.png)
 
 However, mobile performance testing revealed a different pattern. Performance scores dropped significantly on several pages, with the Home Page scoring 77, the Community Page 76, the Browse Page 75, and the Share an Item Page 76. The primary contributor identified by Lighthouse was a relatively slow Largest Contentful Paint (LCP), indicating that important visual elements required longer to load on mobile devices.
 
 **[Evidence 2: Lighthouse Mobile Results Table]**
-![Mobile lighthouse test results](/2017Blog/assets/Mobile-lighthouse-performance-test-results.png)
+![Mobile lighthouse test results](assets/Mobile-lighthouse-performance-test-results.png)
 
 Source code inspection provided further insight into the causes of these results. I identified several large image assets, including fashion.png (1.9 MB) and chair.png (1.46 MB), contributing to a total image payload of approximately 10.4 MB. While these images enhanced visual quality, they increased loading costs and negatively affected mobile performance. In addition, the main stylesheet had grown to approximately 4,795 lines, suggesting that unused or redundant styles accumulated throughout development.
 
 **[Evidence 3: Image and CSS Findings]**
-![images](/2017Blog/assets/images.png)
-![css](/2017Blog/assets/css.png)
+![images](assets/images.png)
+![css](assets/css.png)
 
 The architectural review also highlighted controller-heavy business logic within the messaging system. Functions relating to unread messages, conversation creation, inbox management, and message sending were concentrated within controllers rather than separated into dedicated service layers. Although this structure was sufficient for a prototype-scale application, it could introduce maintainability and scalability challenges as the system grows.
 
@@ -43,12 +43,12 @@ The category-based browsing structure supported efficient item discovery, while 
 Despite these strengths, evaluation identified several usability concerns. One issue involved responsive navigation behaviour. When the browser window became narrow, text within the navigation bar became partially obscured. For example, the "Community" navigation item was reduced to only displaying the letters "nity". Although functionality remained intact, the issue reduced interface clarity and could negatively affect first-time users.
 
 **[Evidence 4: Navigation Bar Responsive Issue Screenshot]**
-![Nav Bar Issue](/2017Blog/assets/Navigation-Bar-Responsive-Issue.png)
+![Nav Bar Issue](assets/Navigation-Bar-Responsive-Issue.png)
 
 Accessibility evaluation was conducted using WCAG AA criteria.
 
 **[Evidence 5: WCAG Evaluation Table]**
-![WCAG Evaluation Table](/2017Blog/assets/WCAG-Evaluation-Table.png)
+![WCAG Evaluation Table](assets/WCAG-Evaluation-Table.png)
 
 Several accessibility requirements were successfully satisfied. All images included alternative text, keyboard navigation was functional throughout the application, page titles were meaningful, form inputs contained labels, and error handling mechanisms provided clear guidance to users. These findings are also reflected in Lighthouse Accessibility scores, which ranged from 96 to 100 across tested pages.
 
@@ -57,7 +57,7 @@ However, the evaluation identified several accessibility shortcomings. The Home 
 A further issue was identified on the Community Page. Although the favourite button used a native button element, it lacked ARIA state attributes such as aria-pressed. As a result, screen readers could identify the button but could not communicate its current state to users relying on assistive technologies.
 
 **[Evidence 6: Favourite Button Accessibility Issue Screenshot]**
-![Button Accessibility Issue Screenshot](/2017Blog/assets/Favourite-Button-Accessibility-Issue-Screenshot.png)
+![Button Accessibility Issue Screenshot](assets/Favourite-Button-Accessibility-Issue-Screenshot.png)
 
 These findings suggest that accessibility was generally considered during development, but not consistently integrated throughout the entire design process. Most issues were relatively minor and could be addressed through interface refinement rather than major structural changes.
 
