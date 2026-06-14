@@ -56,7 +56,7 @@ However, the evaluation identified several accessibility shortcomings. The Home 
 
 A further issue was identified on the Community Page. Although the favourite button used a native button element, it lacked ARIA state attributes such as aria-pressed. As a result, screen readers could identify the button but could not communicate its current state to users relying on assistive technologies.
 
-**[Insert Evidence 6: Favourite Button Accessibility Issue Screenshot]**
+**[Evidence 6: Favourite Button Accessibility Issue Screenshot]**
 ![Button Accessibility Issue Screenshot](/2017Blog/assets/Favourite-Button-Accessibility-Issue-Screenshot.png)
 
 These findings suggest that accessibility was generally considered during development, but not consistently integrated throughout the entire design process. Most issues were relatively minor and could be addressed through interface refinement rather than major structural changes.
